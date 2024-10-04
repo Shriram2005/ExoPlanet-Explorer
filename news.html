@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest News</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/news.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="./contents/nasa-logo.png" alt="" id="nasa-logo">
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./news.html">Latest News</a></li>
+            <li><a href="./quiz.html">Quiz</a></li>
+            <li><a href="./learn.html">Learn</a></li>
+            <li><a href="./aboutUs.html">About</a></li>
+            <li><a href="./contactUs.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1 id="news-heading">📰 Today's Latest News</h1>
+
+    <main>
+        <section id="news-section">
+            <h2>Breaking News</h2>
+            <div id="news-container" class="news-container">
+                <!-- Dynamic News Content Will Appear Here -->
+            </div>
+            <button id="load-more" class="load-more">Load More News</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Latest News | Powered by <strong>News API</strong></p>
+    </footer>
+
+    <script src="./js/news.js"></script>
+    <!-- nav bar script  -->
+<script src="./js/nav.js"></script>
+</body>
+
+</html>

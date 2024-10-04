@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Chronicles of Exoplanet Exploration</title>
+    <!-- Font Awesome for Social Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #0b0c10;
+            color: #c5c6c7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .space-background {
+            background-image: url('space-background.jpg'); /* Use a space-themed background */
+            background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+        }
+
+        h1, h2 {
+            color: #66fcf1;
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* Contact Form Styles */
+        .contact-form {
+            background-color: rgba(11, 12, 16, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #66fcf1;
+            border-radius: 5px;
+            background-color: #1f2833;
+            color: #c5c6c7;
+            font-size: 1rem;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline: none;
+            border-color: #45a29e;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #66fcf1;
+            color: #0b0c10;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #45a29e;
+        }
+
+        /* Social Media Icons */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #66fcf1;
+            font-size: 2rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #45a29e;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .contact-form {
+                padding: 20px;
+            }
+
+            .social-icons a {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .contact-form {
+                padding: 15px;
+            }
+
+            h1, h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            .social-icons a {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="./contents/nasa-logo.png" alt="" id="nasa-logo">
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./news.html">Latest News</a></li>
+            <li><a href="./quiz.html">Quiz</a></li>
+            <li><a href="./learn.html">Learn</a></li>
+            <li><a href="./aboutUs.html">About</a></li>
+            <li><a href="./contactUs.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Space-Themed Background Section -->
+    <div class="space-background">
+        <div class="container">
+            <h1>Get in Touch with Us!</h1>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="container">
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, feedback, or just want to say hello, feel free to reach out using the form below or through our official email.</p>
+
+            <!-- Contact Form -->
+            <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+
+            <p>Or reach us directly at: <strong>your-email@example.com</strong></p>
+        </div>
+    </div>
+
+    <!-- Social Media Links Section -->
+    <div class="container">
+        <h2>Connect with Us on Social Media</h2>
+        <div class="social-icons">
+            <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/yourwhatsapplink" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+
+    <!-- nav bar script  -->
+    <script src="./js/nav.js"></script>
+
+</body>
+</html>

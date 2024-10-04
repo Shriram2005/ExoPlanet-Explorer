@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exoplanets Explorer</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <header class="exo-header">
+        <nav class="exo-navbar">
+            <div class="exo-navbar-container">
+                <a href="#" class="exo-logo">
+                    <img src="./contents/nasa-logo.png" alt="NASA Logo" id="nasa-logo">
+                </a>
+                <div class="exo-menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="exo-nav-menu">
+                    <li><a href="#" class="exo-nav-link">Home</a></li>
+                    <li><a href="./news.html" class="exo-nav-link">Latest News</a></li>
+                    <li><a href="./quiz.html" class="exo-nav-link">Quiz</a></li>
+                    <li><a href="./learn.html" class="exo-nav-link">Learn</a></li>
+                    <li><a href="./aboutUs.html" class="exo-nav-link">About</a></li>
+                    <li><a href="./contactUs.html" class="exo-nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="exo-hero-content">
+            <video autoplay muted loop class="exo-background-video">
+                <source src="./contents/bg-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="exo-hero-text" data-aos="fade-up" data-aos-duration="1000">
+                <h1>Exploring the Cosmos</h1>
+                <p>Embark on a journey to discover exoplanets and unravel the mysteries of the universe.</p>
+                <a href="#" class="exo-cta-button">Start Exploring</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="exo-info-section exo-section" data-aos="fade-up">
+            <div class="exo-container">
+                <h2>Unveiling New Worlds</h2>
+                <p>
+                    Exoplanets, celestial bodies orbiting stars beyond our solar system, have revolutionized our understanding of the cosmos. These distant worlds offer insights into planetary formation, potential for extraterrestrial life, and the vastness of our universe.
+                </p>
+                <a href="#" class="exo-learn-more-btn">Discover More</a>
+            </div>
+        </section>
+
+        <section class="exo-types-section exo-section">
+            <h2 data-aos="fade-up">Types of Exoplanets</h2>
+            <div class="exo-type-grid">
+                <div class="exo-type-card" data-aos="flip-left" data-aos-delay="100">
+                    <img src="./contents/images/GasGiant.jpeg" alt="Gas Giant">
+                    <h3>Gas Giants</h3>
+                    <p>Massive planets composed mainly of hydrogen and helium.</p>
+                </div>
+                <div class="exo-type-card" data-aos="flip-left" data-aos-delay="200">
+                    <img src="./contents/images/neptune.jpg" alt="Neptunian">
+                    <h3>Neptunian</h3>
+                    <p>Ice giants with rocky cores and thick atmospheres.</p>
+                </div>
+                <div class="exo-type-card" data-aos="flip-left" data-aos-delay="300">
+                    <img src="./contents/images/SuperEarth.jpg" alt="Super-Earth">
+                    <h3>Super-Earths</h3>
+                    <p>Planets larger than Earth but smaller than Neptune.</p>
+                </div>
+                <div class="exo-type-card" data-aos="flip-left" data-aos-delay="400">
+                    <img src="./contents/images/Terrestrial.jpg" alt="Terrestrial">
+                    <h3>Terrestrial</h3>
+                    <p>Rocky planets similar in size to Earth.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="exo-discovery-section exo-section" data-aos="fade-up">
+            <div class="exo-container">
+                <h2>How We Find Exoplanets</h2>
+                <div class="exo-method-list">
+                    <div class="exo-method-item" data-aos="zoom-in" data-aos-delay="100">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Transit Method</h3>
+                        <p>Detecting the dimming of a star's light as a planet passes in front of it.</p>
+                    </div>
+                    <div class="exo-method-item" data-aos="zoom-in" data-aos-delay="200">
+                        <i class="fas fa-wave-square"></i>
+                        <h3>Radial Velocity</h3>
+                        <p>Measuring the wobble of a star caused by an orbiting planet's gravity.</p>
+                    </div>
+                    <div class="exo-method-item" data-aos="zoom-in" data-aos-delay="300">
+                        <i class="fas fa-camera"></i>
+                        <h3>Direct Imaging</h3>
+                        <p>Capturing actual images of exoplanets using advanced telescopes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="exo-stats-section exo-section" data-aos="fade-up">
+            <div class="exo-container">
+                <h2>Exoplanet Statistics</h2>
+                <div class="exo-stats-grid">
+                    <div class="exo-stat-item" data-aos="zoom-in" data-aos-delay="100">
+                        <h3>5,000+</h3>
+                        <p>Confirmed Exoplanets</p>
+                    </div>
+                    <div class="exo-stat-item" data-aos="zoom-in" data-aos-delay="200">
+                        <h3>3,000+</h3>
+                        <p>Planetary Systems</p>
+                    </div>
+                    <div class="exo-stat-item" data-aos="zoom-in" data-aos-delay="300">
+                        <h3>100 billion+</h3>
+                        <p>Estimated Planets in Our Galaxy</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="exo-notable-section exo-section" data-aos="fade-up">
+            <div class="exo-container">
+                <h2>Notable Exoplanets</h2>
+                <div class="exo-planet-slider">
+                    <div class="exo-planet-slide" data-aos="flip-left" data-aos-delay="100">
+                        <img src="./contents/images/kepler.jpg" alt="Kepler-16b">
+                        <h3>Kepler-16b</h3>
+                        <p>A Saturn-sized planet orbiting two stars, like Tatooine from Star Wars.</p>
+                    </div>
+                    <div class="exo-planet-slide" data-aos="flip-left" data-aos-delay="200">
+                        <img src="./contents/images/trappist-1e.jpg" alt="TRAPPIST-1e">
+                        <h3>TRAPPIST-1e</h3>
+                        <p>A potentially habitable Earth-sized planet in the TRAPPIST-1 system.</p>
+                    </div>
+                    <div class="exo-planet-slide" data-aos="flip-left" data-aos-delay="300">
+                        <img src="./contents/images/HD 189733 b.jpg" alt="HD 189733 b">
+                        <h3>HD 189733 b</h3>
+                        <p>A "hot Jupiter" with winds up to 5,400 mph and potential glass rain.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="exo-research-section exo-section" data-aos="fade-up">
+            <div class="exo-container">
+                <h2>Current Exoplanet Research</h2>
+                <div class="exo-research-grid">
+                    <div class="exo-research-item" data-aos="fade-right" data-aos-delay="100">
+                        <i class="fas fa-microscope"></i>
+                        <h3>Atmospheric Analysis</h3>
+                        <p>Studying exoplanet atmospheres to detect potential biosignatures.</p>
+                    </div>
+                    <div class="exo-research-item" data-aos="fade-right" data-aos-delay="200">
+                        <i class="fas fa-satellite"></i>
+                        <h3>Advanced Detection Methods</h3>
+                        <p>Developing new technologies to find smaller, Earth-like planets.</p>
+                    </div>
+                    <div class="exo-research-item" data-aos="fade-right" data-aos-delay="300">
+                        <i class="fas fa-user-astronaut"></i>
+                        <h3>Habitability Studies</h3>
+                        <p>Assessing the potential for life on exoplanets and exomoons.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="exo-cta-section" data-aos="fade-up">
+        <div class="exo-container">
+            <h2>Join the Exoplanet Exploration Community</h2>
+            <p>Stay updated with the latest discoveries and research in exoplanet science.</p>
+            <a href="#" class="exo-cta-button">Subscribe to Our Newsletter</a>
+        </div>
+    </section>
+
+    <footer class="exo-main-footer">
+        <div class="exo-container">
+            <div class="exo-footer-content">
+                <div class="exo-footer-section exo-about">
+                    <h3>About Exoplanets Explorer</h3>
+                    <p>Dedicated to exploring and understanding worlds beyond our solar system.</p>
+                    <div class="exo-social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="exo-footer-section exo-links">
+                    <h3>Quick Links</h3>
+                    <div class="exo-quick-links-grid">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Latest News</a></li>
+                            <li><a href="#">Quiz</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Learn</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exo-footer-section exo-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Sandip University, Nashik</p>
+                    <p><i class="fas fa-phone"></i> +91 98341 34470</p>
+                    <p><i class="fas fa-envelope"></i> info@exoplanetsexplorer.com</p>
+                </div>
+            </div>
+            <div class="exo-footer-bottom">
+                <p>&copy; 2023 Exoplanets Explorer. All rights reserved.</p>
+                <p>Powered by NASA Open Science</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- nav bar script  -->
+<script src="./js/nav.js"></script>
+</body>
+</html>

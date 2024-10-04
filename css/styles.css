@@ -1,0 +1,615 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.exo-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header and Navigation */
+.exo-header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.exo-navbar {
+    position: fixed;
+    top: 0;
+    left: 10% !important;
+    width: 80%;
+    border-radius: 0 0 20px 20px;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.exo-navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.exo-logo img {
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.exo-logo img:hover {
+    transform: scale(1.1);
+}
+
+.exo-nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.exo-nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    position: relative;
+}
+
+.exo-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #00a8e8;
+    transition: all 0.3s ease;
+}
+
+.exo-nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.exo-menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.exo-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Hero Content */
+.exo-hero-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.exo-background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.exo-hero-text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    text-align: left;
+    width: 80%;
+    max-width: 800px;
+}
+
+.exo-hero-text h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
+
+.exo-hero-text p {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.exo-cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #00a8e8;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.exo-cta-button:hover {
+    background-color: #0077b6;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Sections */
+.exo-section {
+    padding: 100px 0;
+}
+
+.exo-section h2 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+}
+
+.exo-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #00a8e8;
+}
+
+/* Exoplanets Info Section */
+.exo-info-section {
+    background-color: #111111;
+}
+
+.exo-learn-more-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    background-color: #00a8e8;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.exo-learn-more-btn:hover {
+    background-color: #0077b6;
+    transform: translateY(-3px);
+}
+
+/* Exoplanet Types Section */
+.exo-types-section {
+    background-color: #222222;
+}
+
+.exo-type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 40px;
+}
+
+.exo-type-card {
+    background-color: #333333;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.exo-type-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.exo-type-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.exo-type-card:hover img {
+    transform: scale(1.1);
+}
+
+.exo-type-card h3 {
+    padding: 20px;
+    font-size: 1.8rem;
+    color: #00a8e8;
+}
+
+.exo-type-card p {
+    padding: 0 20px 20px;
+    font-size: 1.1rem;
+}
+
+/* Discovery Methods Section */
+.exo-discovery-section {
+    background-color: #111111;
+}
+
+.exo-method-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.exo-method-item {
+    text-align: center;
+    margin: 20px;
+    flex-basis: 30%;
+    padding: 30px;
+    background-color: #222222;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.exo-method-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.exo-method-item i {
+    font-size: 4rem;
+    color: #00a8e8;
+    margin-bottom: 20px;
+}
+
+.exo-method-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #00a8e8;
+}
+
+.exo-method-item p {
+    font-size: 1.1rem;
+}
+
+/* Exoplanet Statistics Section */
+.exo-stats-section {
+    background-color: #222222;
+    padding: 80px 0;
+}
+
+.exo-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.exo-stat-item {
+    text-align: center;
+    padding: 30px;
+    background-color: #333333;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.exo-stat-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.exo-stat-item h3 {
+    font-size: 2.5rem;
+    color: #00a8e8;
+    margin-bottom: 10px;
+}
+
+.exo-stat-item p {
+    font-size: 1.1rem;
+}
+
+/* Notable Exoplanets Section */
+.exo-notable-section {
+    background-color: #111111;
+    padding: 80px 0;
+}
+
+.exo-planet-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    padding: 40px 0;
+    left: 10%;
+}
+
+.exo-planet-slide {
+    flex: 0 0 300px;
+    background-color: #222222;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.exo-planet-slide:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.exo-planet-slide img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.exo-planet-slide h3 {
+    padding: 20px 20px 10px;
+    font-size: 1.5rem;
+    color: #00a8e8;
+}
+
+.exo-planet-slide p {
+    padding: 0 20px 20px;
+    font-size: 1rem;
+}
+
+/* Exoplanet Research Section */
+.exo-research-section {
+    background-color: #222222;
+    padding: 80px 0;
+}
+
+.exo-research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.exo-research-item {
+    text-align: center;
+    padding: 30px;
+    background-color: #333333;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.exo-research-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.exo-research-item i {
+    font-size: 3rem;
+    color: #00a8e8;
+    margin-bottom: 20px;
+}
+
+.exo-research-item h3 {
+    font-size: 1.5rem;
+    color: #00a8e8;
+    margin-bottom: 15px;
+}
+
+.exo-research-item p {
+    font-size: 1rem;
+}
+
+/* CTA Section */
+.exo-cta-section {
+    background-color: #0077b6;
+    color: #ffffff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.exo-cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.exo-cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Main Footer */
+.exo-main-footer {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 60px 0 20px;
+}
+
+.exo-footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.exo-footer-section {
+    flex: 1;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    min-width: 200px;
+}
+
+.exo-footer-section:last-child {
+    margin-right: 0;
+}
+
+.exo-footer-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #00a8e8;
+}
+
+.exo-footer-section p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.exo-social-icons {
+    margin-top: 20px;
+}
+
+.exo-social-icons a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.exo-social-icons a:hover {
+    color: #00a8e8;
+}
+
+.exo-footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.exo-footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.exo-footer-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.exo-footer-links ul li a:hover {
+    color: #00a8e8;
+}
+
+.exo-footer-contact i {
+    margin-right: 10px;
+    color: #00a8e8;
+}
+
+.exo-footer-bottom {
+    border-top: 1px solid #333333;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .exo-nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(10px);
+    }
+
+    .exo-nav-menu.active {
+        display: flex;
+    }
+
+    .exo-nav-link {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .exo-menu-toggle {
+        display: flex;
+    }
+
+    .exo-hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .exo-hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .exo-type-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exo-method-item {
+        flex-basis: 100%;
+    }
+
+    .exo-stats-grid,
+    .exo-research-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exo-planet-slider {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .exo-planet-slide {
+        width: 100%;
+    }
+
+    .exo-footer-content {
+        flex-direction: column;
+    }
+
+    .exo-footer-section {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+}
+
+.exo-footer-section.exo-links .exo-quick-links-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.exo-footer-section.exo-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.exo-footer-section.exo-links ul li {
+    margin-bottom: 10px;
+}
+
+.exo-footer-section.exo-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.exo-footer-section.exo-links ul li a:hover {
+    color: #00a8e8;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .exo-footer-section.exo-links .exo-quick-links-grid {
+        grid-template-columns: 1fr;
+    }
+}
