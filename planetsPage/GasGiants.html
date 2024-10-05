@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/gasGiants.css">
-    <link rel="stylesheet" href="../css/styles.css">
     <title>Gas Giants - Exoplanets Explorer</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/GasGiants.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
-    <header>
+    <header class="exo-header">
         <nav class="exo-navbar">
             <div class="exo-navbar-container">
                 <a href="#" class="exo-logo">
                     <img src="../contents/nasa-logo.png" alt="NASA Logo" id="nasa-logo">
                 </a>
-                <div class="exo-menu-toggle" id="mobile-menu" data-target="exo-nav-menu">
+                <div class="exo-menu-toggle" id="mobile-menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
                 <ul class="exo-nav-menu" id="exo-nav-menu">
-                    <li><a href="../index.html" class="exo-nav-link">Home</a></li>
+                    <li><a href="#" class="exo-nav-link">Home</a></li>
                     <li><a href="./news.html" class="exo-nav-link">Latest News</a></li>
                     <li><a href="./quiz.html" class="exo-nav-link">Quiz</a></li>
                     <li><a href="./blog.html" class="exo-nav-link">Blog</a></li>
@@ -28,42 +32,130 @@
                 </ul>
             </div>
         </nav>
+        <!-- Sidebar -->
+        <div class="exo-sidebar" id="exo-sidebar">
+            <div class="exo-sidebar-header">
+                <img src="./contents/nasa-logo.png" alt="NASA Logo" class="exo-sidebar-logo">
+                <button class="exo-sidebar-close" id="sidebar-close">&times;</button>
+            </div>
+            <ul class="exo-sidebar-menu">
+                <li><a href="./index.html" class="exo-sidebar-link">Home</a></li>
+                <li><a href="./news.html" class="exo-sidebar-link">Latest News</a></li>
+                <li><a href="./quiz.html" class="exo-sidebar-link">Quiz</a></li>
+                <li><a href="./blog.html" class="exo-sidebar-link">Blog</a></li>
+                <li><a href="./aboutUs.html" class="exo-sidebar-link">About Us</a></li>
+            </ul>
+            <div class="exo-sidebar-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="exo-hero-content">
+            <video autoplay muted loop class="exo-background-video">
+                <source src="./contents/bg-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="exo-hero-text" data-aos="fade-up" data-aos-duration="1000">
+                <h1>Exploring the Cosmos</h1>
+                <p>Embark on a journey to discover exoplanets and unravel the mysteries of the universe.</p>
+                <a href="./blog.html" class="exo-cta-button">Start Exploring</a>
+            </div>
+        </div>
     </header>
+
     <main>
         <section class="exo-hero">
             <div class="exo-hero-content">
                 <h1 class="exo-hero-title" data-aos="fade-up">Gas Giants</h1>
-                <p class="exo-hero-subtitle" data-aos="fade-up" data-aos-delay="200">Explore the majestic gas giants of our universe</p>
+                <p class="exo-hero-subtitle" data-aos="fade-up" data-aos-delay="200">Explore the majestic behemoths of our universe</p>
             </div>
         </section>
+        
         <section class="exo-content">
             <div class="exo-container">
                 <h2 class="exo-section-title" data-aos="fade-up">What are Gas Giants?</h2>
                 <p class="exo-section-text" data-aos="fade-up" data-aos-delay="200">
-                    Gas giants are large planets that are primarily composed of hydrogen and helium. Unlike rocky planets, gas giants do not have a well-defined solid surface. The most well-known gas giants in our solar system are Jupiter and Saturn.
+                    Gas giants are massive planets primarily composed of hydrogen and helium. Unlike rocky planets, they lack a well-defined solid surface. These celestial giants play a crucial role in shaping planetary systems and offer insights into the formation and evolution of planets.
                 </p>
                 <div class="exo-planet-grid">
                     <div class="exo-planet-card" data-aos="fade-up" data-aos-delay="300">
-                        <img src="../contents/images/GasGiant.jpeg" alt="Jupiter">
-                        <h3>Jupiter</h3>
-                        <p>Jupiter is the largest planet in our solar system and is known for its Great Red Spot, a giant storm that has been raging for centuries.</p>
+                        <img src="../contents/images/jupiter.jpg" alt="Jupiter">
+                        <div class="exo-planet-card-content">
+                            <h3>Jupiter</h3>
+                            <p>The largest planet in our solar system, Jupiter is known for its Great Red Spot, a giant storm that has been raging for centuries. Its powerful magnetic field and numerous moons make it a fascinating subject of study.</p>
+                        </div>
                     </div>
                     <div class="exo-planet-card" data-aos="fade-up" data-aos-delay="400">
-                        <img src="../contents/images/GasGiant.jpeg" alt="Saturn">
-                        <h3>Saturn</h3>
-                        <p>Saturn is famous for its stunning ring system, which is made up of ice and rock particles. It is the second-largest planet in our solar system.</p>
+                        <img src="../contents/images/saturn.jpg" alt="Saturn">
+                        <div class="exo-planet-card-content">
+                            <h3>Saturn</h3>
+                            <p>Famous for its stunning ring system, Saturn is the second-largest planet in our solar system. Its low density allows it to float in water, and its moon Titan is the only moon known to have a dense atmosphere.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="exo-facts-section">
+            <div class="exo-container">
+                <h2 class="exo-section-title" data-aos="fade-up">Fascinating Facts</h2>
+                <div class="exo-facts-grid">
+                    <div class="exo-fact-item" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-wind"></i>
+                        <h4>Extreme Winds</h4>
+                        <p>Gas giants experience incredibly fast winds, with speeds reaching up to 1,000 mph on Jupiter.</p>
+                    </div>
+                    <div class="exo-fact-item" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-broadcast-tower"></i>
+                        <h4>Powerful Magnetospheres</h4>
+                        <p>These planets have intense magnetic fields, with Jupiter's being the strongest in the solar system.</p>
+                    </div>
+                    <div class="exo-fact-item" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-moon"></i>
+                        <h4>Numerous Moons</h4>
+                        <p>Gas giants host a large number of moons, with Jupiter and Saturn having over 60 known moons each.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
-        <div class="exo-footer-content">
-            <div class="exo-footer-section exo-contact">
-                <h3>Contact Us</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Sandip University, Nashik</p>
-                <p><i class="fas fa-phone"></i> +91 98341 34470</p>
-                <p><i class="fas fa-envelope"></i> info@exoplanetsexplorer.com</p>
+
+    <footer class="exo-main-footer">
+        <div class="exo-container">
+            <div class="exo-footer-content">
+                <div class="exo-footer-section exo-about">
+                    <h3>About Exoplanets Explorer</h3>
+                    <p>Dedicated to exploring and understanding worlds beyond our solar system.</p>
+                    <div class="exo-social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="exo-footer-section exo-links">
+                    <h3>Quick Links</h3>
+                    <div class="exo-quick-links-grid">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Latest News</a></li>
+                            <li><a href="#">Quiz</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Learn</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exo-footer-section exo-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Sandip University, Nashik</p>
+                    <p><i class="fas fa-phone"></i> +91 98341 34470</p>
+                    <p><i class="fas fa-envelope"></i> info@exoplanetsexplorer.com</p>
+                </div>
             </div>
             <div class="exo-footer-bottom">
                 <p>&copy; 2023 Exoplanets Explorer. All rights reserved.</p>
@@ -71,10 +163,12 @@
             </div>
         </div>
     </footer>
-    <script src="../js/nav.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+
+
+    <script src="../js/main.js"></script>
     <script>
         AOS.init();
     </script>
+    <script src="../js/nav.js"></script>
 </body>
 </html>
