@@ -4,50 +4,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latest News</title>
+    <title>Latest Exoplanet News - Exoplanets Explorer</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/news.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
-
-    <nav>
-        <div class="logo">
-            <img src="./contents/nasa-logo.png" alt="" id="nasa-logo">
-        </div>
-        <div class="menu-toggle" id="mobile-menu">
-            <i class="fas fa-bars"></i>
-        </div>
-        <ul class="nav-links">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./news.html">Latest News</a></li>
-            <li><a href="./quiz.html">Quiz</a></li>
-            <li><a href="./learn.html">Learn</a></li>
-            <li><a href="./aboutUs.html">About</a></li>
-            <li><a href="./contactUs.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <h1 id="news-heading">📰 Today's Latest News</h1>
-
-    <main>
-        <section id="news-section">
-            <h2>Breaking News</h2>
-            <div id="news-container" class="news-container">
-                <!-- Dynamic News Content Will Appear Here -->
+    <header class="exo-header exo-news-header">
+        <nav class="exo-navbar">
+            <div class="exo-navbar-container">
+                <a href="#" class="exo-logo">
+                    <img src="./contents/nasa-logo.png" alt="NASA Logo" id="nasa-logo">
+                </a>
+                <div class="exo-menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="exo-nav-menu">
+                    <li><a href="index.html" class="exo-nav-link">Home</a></li>
+                    <li><a href="./news.html" class="exo-nav-link">Latest News</a></li>
+                    <li><a href="./quiz.html" class="exo-nav-link">Quiz</a></li>
+                    <li><a href="./blog.html" class="exo-nav-link">Blog</a></li>
+                    <li><a href="./aboutUs.html" class="exo-nav-link">About</a></li>
+                    <li><a href="./contactUs.html" class="exo-nav-link">Contact</a></li>
+                </ul>
             </div>
-            <button id="load-more" class="load-more">Load More News</button>
+        </nav>
+    </header>
+
+    <main class="exo-news-main">
+        <section class="exo-news-hero">
+            <div class="exo-container">
+                <h1 data-aos="fade-up">Latest Exoplanet News</h1>
+                <p data-aos="fade-up" data-aos-delay="200">Stay updated with the most recent breakthroughs in exoplanet research</p>
+            </div>
+        </section>
+
+        <section class="exo-news-section">
+            <div class="exo-container">
+                <h2 class="exo-section-title" data-aos="fade-up">Latest Discoveries</h2>
+                <div id="news-container" class="exo-news-grid">
+                    <!-- Dynamic News Content Will Appear Here -->
+                </div>
+                <button id="load-more" class="exo-cta-button" data-aos="fade-up">Load More News</button>
+            </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2024 Latest News | Powered by <strong>News API</strong></p>
+    <section class="exo-cta-section" data-aos="fade-up">
+        <div class="exo-container">
+            <h2>Join Our Cosmic Journey</h2>
+            <p>Stay updated with the latest discoveries in exoplanet research.</p>
+            <a href="#" class="exo-cta-button">Subscribe to Our Newsletter</a>
+        </div>
+    </section>
+
+    <footer class="exo-main-footer">
+        <div class="exo-container">
+            <div class="exo-footer-content">
+                <div class="exo-footer-section exo-about">
+                    <h3>About Exoplanets Explorer</h3>
+                    <p>Dedicated to exploring and understanding worlds beyond our solar system.</p>
+                    <div class="exo-social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="exo-footer-section exo-links">
+                    <h3>Quick Links</h3>
+                    <div class="exo-quick-links-grid">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Latest News</a></li>
+                            <li><a href="#">Quiz</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Learn</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exo-footer-section exo-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Sandip University, Nashik</p>
+                    <p><i class="fas fa-phone"></i> +91 98341 34470</p>
+                    <p><i class="fas fa-envelope"></i> info@exoplanetsexplorer.com</p>
+                </div>
+            </div>
+            <div class="exo-footer-bottom">
+                <p>&copy; 2023 Exoplanets Explorer. All rights reserved.</p>
+                <p>Powered by NASA Open Science</p>
+            </div>
+        </div>
     </footer>
 
+    <script src="./js/main.js"></script>
     <script src="./js/news.js"></script>
-    <!-- nav bar script  -->
-<script src="./js/nav.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="./js/nav.js"></script>
 </body>
 
 </html>
