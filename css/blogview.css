@@ -1,0 +1,218 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.exo-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.exo-blog-view {
+    background-color: #111111;
+    margin-top: 10%; /* Change this from 10% to 0 */
+    padding: 40px 0; /* Add some padding */
+    color: #ffffff; /* Add this line to ensure text is white */
+}
+
+.exo-article {
+    background-color: #222222;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    color: #ffffff; /* Ensure text is white for contrast */
+}
+
+.exo-article-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.exo-article-header h1 {
+    font-size: 3rem;
+    color: #00a8e8;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.exo-article-meta {
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.exo-article-image {
+    margin: 0 -40px 40px;
+}
+
+.exo-article-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.exo-article-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e0e0e0; /* Light gray for better readability */
+}
+
+.exo-article-content h2 {
+    font-size: 2rem;
+    color: #00a8e8;
+    margin: 40px 0 20px;
+}
+
+.exo-article-content p {
+    margin-bottom: 20px;
+}
+
+.exo-related-articles {
+    margin-top: 80px;
+}
+
+.exo-related-articles h2 {
+    font-size: 2.5rem;
+    color: #00a8e8;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.exo-related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.exo-related-card {
+    background-color: #222222;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.exo-related-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.exo-related-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.exo-related-card h3 {
+    font-size: 1.3rem;
+    color: #00a8e8;
+    padding: 20px;
+    margin: 0;
+}
+
+.exo-read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00a8e8;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 20px 20px;
+    transition: all 0.3s ease;
+}
+
+.exo-read-more:hover {
+    background-color: #0077b6;
+}
+
+@media (max-width: 768px) {
+    .exo-blog-view {
+        padding: 100px 0 60px;
+    }
+
+    .exo-article {
+        padding: 30px;
+    }
+
+    .exo-article-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .exo-article-image {
+        margin: 0 -30px 30px;
+    }
+
+    .exo-article-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .exo-article-content {
+        font-size: 1rem;
+    }
+
+    .exo-related-articles h2 {
+        font-size: 2rem;
+    }
+}
+
+.exo-blog-hero {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    overflow: hidden;
+    margin-top: 60px; /* Adjust this value to match your header height */
+    margin-bottom: 40px;
+}
+
+.exo-blog-hero-image {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    opacity: 0.6; /* Increase opacity from 0.4 to 0.6 */
+}
+
+.exo-blog-hero-content {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    z-index: 1;
+    padding: 0 20px;
+    max-width: 800px;
+}
+
+.exo-blog-hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); /* Increase shadow for better contrast */
+    color: #ffffff; /* Ensure title is white */
+}
+
+.exo-blog-hero-meta {
+    font-size: 1rem;
+    opacity: 1; /* Changed from 0.9 to 1 for better visibility */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); /* Increase shadow for better contrast */
+    color: #ffffff; /* Ensure meta text is white */
+}
+
+@media (max-width: 768px) {
+    .exo-blog-hero {
+        height: 200px;
+    }
+
+    .exo-blog-hero-title {
+        font-size: 2rem;
+    }
+
+    .exo-blog-hero-meta {
+        font-size: 0.9rem;
+    }
+}
