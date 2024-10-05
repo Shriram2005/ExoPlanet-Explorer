@@ -1,3 +1,8 @@
+
+.exo-header{
+    padding-top: 80px;
+}
+
 .exo-quiz-section {
     background-color: rgba(0, 0, 0, 0.7);
     min-height: calc(100vh - 60px);
@@ -7,6 +12,11 @@
     padding: 40px 0;
     margin-top: 10px;
 }
+
+.exo-hero-content{
+    overflow: scroll;
+}
+
 
 .quiz-container {
     background-color: rgba(34, 34, 34, 0.9);
@@ -45,6 +55,10 @@
 
     #question {
         font-size: 1.2rem;
+    }
+
+    .exo-header{
+        padding-top: 0;
     }
 }
 
