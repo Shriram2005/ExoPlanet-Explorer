@@ -3,23 +3,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const sidebar = document.getElementById('exo-sidebar');
     const sidebarClose = document.getElementById('sidebar-close');
 
-    if (mobileMenu && sidebar && sidebarClose) {
-        mobileMenu.addEventListener('click', function(event) {
-            event.stopPropagation();
-            sidebar.classList.add('active');
-        });
+    mobileMenu.addEventListener('click', function() {
+        sidebar.classList.toggle('active');
+    });
 
-        sidebarClose.addEventListener('click', function() {
+    sidebarClose.addEventListener('click', function() {
+        sidebar.classList.remove('active');
+    });
+
+    // Close sidebar when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!sidebar.contains(event.target) && !mobileMenu.contains(event.target)) {
             sidebar.classList.remove('active');
-        });
-
-        // Close sidebar when clicking outside
-        document.addEventListener('click', function(event) {
-            if (sidebar.classList.contains('active') && !sidebar.contains(event.target) && !mobileMenu.contains(event.target)) {
-                sidebar.classList.remove('active');
-            }
-        });
-    } else {
-        console.error('One or more required elements are missing.');
-    }
+        }
+    });
 });

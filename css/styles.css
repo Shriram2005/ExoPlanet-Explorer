@@ -1,14 +1,3 @@
-/* Root variables */
-:root {
-    --primary-color: #00a8e8;
-    --secondary-color: #0077b6;
-    --text-color: #ffffff;
-    --background-dark: #000000;
-    --background-light: #111111;
-    --background-lighter: #222222;
-    --background-lightest: #333333;
-}
-
 /* Reset and base styles */
 * {
     margin: 0;
@@ -19,8 +8,9 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-dark);
+    color: #ffffff;
+    background-color: #000000;
+    padding-top: 60px; /* Should match the navbar height */
 }
 
 .exo-container {
@@ -28,7 +18,10 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
-
+#nasa-logo {
+    height: 60px;
+    width: auto;
+}
 /* Header and Navigation */
 .exo-header {
     position: relative;
@@ -39,22 +32,28 @@ body {
 
 .exo-navbar {
     position: fixed;
-    top: 0;
-    left: 10%;
-    width: 80%;
+    top: 20px; /* Adjust this value to control the distance from the top */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Adjust this value to control the width */
+    max-width: 1200px; /* Prevents the navbar from becoming too wide on large screens */
     height: 60px;
-    border-radius: 0 0 20px 20px;
     z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .exo-navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px; /* Reduced top and bottom padding */
+    width: 100%;
 }
 
 .exo-logo img {
@@ -69,6 +68,8 @@ body {
 .exo-nav-menu {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .exo-nav-link {
@@ -100,6 +101,7 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    z-index: 1001;
 }
 
 .exo-menu-toggle span {
@@ -112,74 +114,188 @@ body {
 
 /* Mobile styles */
 @media (max-width: 768px) {
-    .exo-nav-menu.show {
+    .exo-nav-menu {
+        display: none;
+    }
+
+    .exo-menu-toggle {
         display: flex;
+    }
+
+    .exo-nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 20px 0;
+    }
+
+    .exo-nav-menu.active li {
+        margin: 10px 0;
+    }
+
+    .exo-navbar {
+        width: 90%; /* Slightly wider on mobile for better touch targets */
+        padding: 0 20px;
+    }
+
+    .exo-nav-menu {
+        display: none; /* Hide the menu on mobile */
+    }
+
+    .exo-menu-toggle {
+        display: block; /* Show the menu toggle on mobile */
     }
 }
 
-/* Hero Section */
+/* Hero Content */
 .exo-hero-content {
     position: relative;
-    height: 100%;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .exo-hero-video {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: translate(-50%, -50%);
-    z-index: -1;
+    z-index: 1;
 }
 
 .exo-hero-text {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translateY(-50%);
-    text-align: left;
-    width: 80%;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 20px;
     max-width: 800px;
 }
 
 .exo-hero-text h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .exo-hero-text p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-bottom: 30px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .exo-cta-button {
     display: inline-block;
-    padding: 15px 40px;
+    padding: 12px 30px;
     background-color: #00a8e8;
     color: #ffffff;
     text-decoration: none;
     border-radius: 50px;
-    transition: all 0.3s ease;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .exo-cta-button:hover {
     background-color: #0077b6;
     transform: translateY(-3px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .exo-navbar {
+        width: 100%;
+        border-radius: 0;
+        top: 0;
+        left: 0;
+        transform: none;
+        padding: 0 15px;
+    }
+
+    .exo-hero-content {
+        align-items: center;
+        padding-top: 60px;
+    }
+
+    .exo-hero-text {
+        padding: 0 15px;
+    }
+
+    .exo-hero-text h1 {
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+
+    .exo-hero-text p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .exo-cta-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .exo-section {
+        padding: 40px 0;
+    }
+
+    .exo-section h2 {
+        font-size: 2rem;
+    }
+
+    .exo-type-grid, .exo-method-list, .exo-stats-grid, .exo-research-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exo-planet-slider {
+        padding: 20px 0;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .exo-planet-slide {
+        flex: 0 0 80%;
+        margin-right: 20px;
+    }
+
+    .exo-footer-content {
+        flex-direction: column;
+    }
+
+    .exo-footer-section {
+        margin-bottom: 30px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 375px) {
+    .exo-hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .exo-hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .exo-cta-button {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
 }
 
 /* Sections */
 .exo-section {
-    padding: 100px 0;
+    padding: 80px 0;
 }
 
 .exo-section h2 {
@@ -202,7 +318,7 @@ body {
 
 /* Exoplanets Info Section */
 .exo-info-section {
-    background-color: var(--background-light);
+    background-color: #111111;
 }
 
 .exo-learn-more-btn {
@@ -226,7 +342,7 @@ body {
 
 /* Exoplanet Types Section */
 .exo-types-section {
-    background-color: var(--background-lighter);
+    background-color: #222222;
 }
 
 .exo-type-grid {
@@ -281,23 +397,24 @@ body {
 
 /* Discovery Methods Section */
 .exo-discovery-section {
-    background-color: var(--background-light);
+    background-color: #111111;
 }
 
 .exo-method-list {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .exo-method-item {
     text-align: center;
-    margin: 20px;
-    flex-basis: 30%;
+    flex-basis: calc(33.333% - 20px);
     padding: 30px;
     background-color: #222222;
     border-radius: 15px;
     transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .exo-method-item:hover {
@@ -306,24 +423,73 @@ body {
 }
 
 .exo-method-item i {
-    font-size: 4rem;
+    font-size: 3rem;
     color: #00a8e8;
     margin-bottom: 20px;
 }
 
 .exo-method-item h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 15px;
     color: #00a8e8;
 }
 
 .exo-method-item p {
-    font-size: 1.1rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .exo-method-item {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .exo-method-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .exo-method-item {
+        flex-basis: 100%;
+        max-width: 350px;
+        margin-bottom: 20px;
+    }
+
+    .exo-method-item i {
+        font-size: 2.5rem;
+    }
+
+    .exo-method-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .exo-method-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .exo-method-item {
+        padding: 20px;
+    }
+
+    .exo-method-item i {
+        font-size: 2rem;
+    }
+
+    .exo-method-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .exo-method-item p {
+        font-size: 0.8rem;
+    }
 }
 
 /* Exoplanet Statistics Section */
 .exo-stats-section {
-    background-color: var(--background-lighter);
+    background-color: #222222;
     padding: 80px 0;
 }
 
@@ -358,7 +524,7 @@ body {
 
 /* Notable Exoplanets Section */
 .exo-notable-section {
-    background-color: var(--background-light);
+    background-color: #111111;
     padding: 80px 0;
 }
 
@@ -402,7 +568,7 @@ body {
 
 /* Exoplanet Research Section */
 .exo-research-section {
-    background-color: var(--background-lighter);
+    background-color: #222222;
     padding: 80px 0;
 }
 
@@ -443,7 +609,7 @@ body {
 
 /* CTA Section */
 .exo-cta-section {
-    background-color: var(--secondary-color);
+    background-color: #0077b6;
     color: #ffffff;
     padding: 80px 0;
     text-align: center;
@@ -461,7 +627,7 @@ body {
 
 /* Main Footer */
 .exo-main-footer {
-    background-color: var(--background-light);
+    background-color: #111111;
     color: #ffffff;
     padding: 60px 0 20px;
 }
@@ -565,19 +731,20 @@ body {
 .exo-sidebar {
     position: fixed;
     top: 0;
-    left: -100%;
+    right: -100%;
     width: 80%;
     max-width: 300px;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
     z-index: 2000;
-    transition: left 0.3s ease-in-out;
+    transition: right 0.3s ease-in-out;
     overflow-y: auto;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
 }
 
 .exo-sidebar.active {
-    left: 0;
+    right: 0;
 }
 
 .exo-sidebar-header {
@@ -599,6 +766,11 @@ body {
     color: #ffffff;
     font-size: 24px;
     cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.exo-sidebar-close:hover {
+    color: #00a8e8;
 }
 
 .exo-sidebar-menu {
@@ -610,30 +782,51 @@ body {
     display: block;
     color: #ffffff;
     text-decoration: none;
-    padding: 10px 0;
+    padding: 15px 0;
     font-size: 1.2rem;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .exo-sidebar-link:hover {
     color: #00a8e8;
+    padding-left: 10px;
 }
 
 .exo-sidebar-social {
     display: flex;
-    justify-content: center;
-    padding: 20px;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .exo-sidebar-social a {
     color: #ffffff;
     font-size: 1.5rem;
-    margin: 0 10px;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .exo-sidebar-social a:hover {
     color: #00a8e8;
+    transform: scale(1.2);
+}
+
+/* Sidebar scrollbar styling */
+.exo-sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.exo-sidebar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.exo-sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+}
+
+.exo-sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 /* Adjust existing styles for mobile */
@@ -656,4 +849,48 @@ body {
 /* Add this to ensure all main content starts below the fixed navbar */
 main {
     padding-top: 60px; /* Should match the navbar height */
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .exo-section {
+        padding: 60px 0;
+    }
+
+    .exo-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .exo-hero-text h1 {
+        font-size: 40px;
+        margin-top: 10px;
+        
+    }
+    .highlight {
+        color: #00a8e8;
+        font-size: 40px;
+
+    }
+    .exo-hero-text p {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .exo-cta-button {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+
+    .exo-navbar {
+        height: 50px;
+    }
+
+    #nasa-logo {
+        height: 40px;
+    }
+
+    .exo-menu-toggle {
+        width: 25px;
+        height: 20px;
+    }
 }
