@@ -48,6 +48,42 @@ function fetchArticleData(id) {
                 image: "./contents/blogs/blog-1.png",
                 relatedArticles: [2, 3]
             },
+            2: {  // New article entry for AI in Exoplanet Detection
+                title: "The Role of AI in Exoplanet Detection",
+                author: "Prof. Michael Chen",
+                date: "May 22, 2023",
+                content: `<p>Artificial Intelligence (AI) is revolutionizing the way we search for and analyze exoplanets, enabling faster and more accurate discoveries than ever before...</p>
+                          <h2>The Rise of AI in Astronomy</h2>
+                          <p>The field of astronomy has always been data-driven, but with the advent of modern telescopes and space missions, the amount of data has exploded...</p>
+                          <h2>AI-Assisted Planet Hunting</h2>
+                          <p>One of the most well-known successes of AI in exoplanet detection came in 2017, when scientists at Google AI, in collaboration with NASA, discovered two new exoplanets...</p>
+                          <h2>The Advantages of AI</h2>
+                          <p>AI brings several key advantages to the field of exoplanet detection: Efficiency, Accuracy, Scalability, and Pattern Recognition...</p>
+                          <h2>Challenges and Limitations</h2>
+                          <p>Despite its many advantages, AI is not without its challenges in exoplanet detection...</p>
+                          <h2>The Future of AI in Exoplanet Exploration</h2>
+                          <p>As AI technology continues to evolve, its role in exoplanet research will only grow...</p>
+                          <h2>Conclusion</h2>
+                          <p>AI is transforming the field of exoplanet detection, making the search for distant worlds faster, more efficient, and more precise...</p>
+                          <h3>Author Bio</h3>
+                          <p>Prof. Michael Chen is a leading expert in computational astrophysics, with a focus on the application of AI and machine learning in astronomy...</p>`,
+                image: "./contents/blog/post2.jpg",  // You can change this to an appropriate image
+                relatedArticles: [1, 3]
+            },
+            3: {  // New article entry for Exoplanet Atmospheres
+                title: "Exoplanet Atmospheres: What Can They Tell Us?",
+                author: "Dr. Sarah Thompson",
+                date: "May 29, 2023",
+                content: `<p>Studying the atmospheres of exoplanets can provide crucial information about their potential habitability and composition. By analyzing the light that passes through an exoplanet's atmosphere, scientists can identify the presence of different molecules, such as water vapor, carbon dioxide, and methane...</p>
+                          <h2>Methods for Studying Exoplanet Atmospheres</h2>
+                          <p>There are several methods that scientists use to study exoplanet atmospheres. One common method is transmission spectroscopy...</p>
+                          <h2>Recent Discoveries</h2>
+                          <p>In recent years, scientists have made several exciting discoveries about exoplanet atmospheres. For example, the James Webb Space Telescope has detected the presence of water vapor in the atmosphere of a distant exoplanet...</p>
+                          <h3>Author's Bio</h3>
+                          <p>Dr. Sarah Thompson is a planetary scientist at the University of Arizona. Her research focuses on the study of exoplanet atmospheres...</p>`,
+                image: "./contents/blog/post3.jpg",  // You can change this to an appropriate image
+                relatedArticles: [1, 2]
+            },
             // Add more mock articles here
         };
         setTimeout(() => resolve(mockData[id]), 100); // Simulate network delay
