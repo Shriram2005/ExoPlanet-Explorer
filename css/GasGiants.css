@@ -1,108 +1,183 @@
 /* Gas Giants Page Styles */
 .exo-hero {
     position: relative;
-    height: 400px;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('../contents/space-bg.jpg') no-repeat center center/cover;
+    background: url('../contents/images/GasGiant.jpeg') no-repeat center center/cover;
     color: #ffffff;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 40px; /* Increased padding to account for the fixed navbar */
+    /* margin-top: 20px; Add margin to push the hero below the fixed navbar */
+}
+
+.exo-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.exo-hero-content {
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 20px;
 }
 
 .exo-hero-title {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 4rem;
+    margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .exo-hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
 }
 
 .exo-content {
-    padding: 60px 20px;
-    background-color: #000000;
-}
-
-.exo-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 80px 0;
+    background-color: #111111;
 }
 
 .exo-section-title {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    margin-bottom: 30px;
     text-align: center;
+    color: #00a8e8;
 }
 
 .exo-section-text {
     font-size: 1.2rem;
-    margin-bottom: 40px;
+    line-height: 1.8;
+    margin-bottom: 50px;
     text-align: center;
+    color: #ffffff;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .exo-planet-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 0 20px;
 }
 
 .exo-planet-card {
-    background-color: #1d1d1d;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #222222;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .exo-planet-card img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.exo-planet-card:hover img {
+    transform: scale(1.05);
+}
+
+.exo-planet-card-content {
+    padding: 25px;
 }
 
 .exo-planet-card h3 {
-    font-size: 1.5rem;
-    margin: 15px 0;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #00a8e8;
 }
 
 .exo-planet-card p {
-    font-size: 1rem;
-    padding: 0 15px 15px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff;
 }
 
 .exo-planet-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-.exo-footer-section{
-    background-color: #000000;
-    color: #ffffff;
-    padding: 20px;
+.exo-facts-section {
+    background-color: #222222;
+    padding: 80px 0;
+}
+
+.exo-facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.exo-fact-item {
+    background-color: #333333;
+    border-radius: 15px;
+    padding: 30px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exo-fact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.exo-fact-item i {
+    font-size: 3rem;
+    color: #00a8e8;
+    margin-bottom: 20px;
+}
+
+.exo-fact-item h4 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.exo-fact-item p {
+    font-size: 1.1rem;
+    color: #cccccc;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .exo-hero {
-        height: 300px;
+        height: 400px;
     }
 
     .exo-hero-title {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .exo-hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
-    .exo-planet-card {
-        width: 100%;
+    .exo-section-title {
+        font-size: 2.5rem;
+    }
+
+    .exo-section-text {
+        font-size: 1.1rem;
+    }
+
+    .exo-planet-card h3 {
+        font-size: 1.8rem;
+    }
+
+    .exo-planet-card p {
+        font-size: 1rem;
     }
 }
