@@ -11,10 +11,25 @@ body {
     color: #cccccc;
 }
 
+.exo-news-main{
+    padding: 0;
+}
+
+.exo-news-hero{
+    
+}
+
 /* News Section */
 .exo-news-section {
     background-color: #222222;
     padding: 80px 20px;
+}
+
+.exo-news-hero{
+    padding: 50px;
+    align-items: center;
+    text-align: center;
+
 }
 
 #news-container {
@@ -31,9 +46,10 @@ body {
         justify-content: space-around;
     }
 
-    .news-header{
-        padding-top: 50px;
+    .exo-news-main{
+        padding-top: 100px;
     }
+
 }
 
 .news-item {
@@ -114,4 +130,5 @@ body {
         width: 100%;
         max-width: 100%;
     }
+
 }
