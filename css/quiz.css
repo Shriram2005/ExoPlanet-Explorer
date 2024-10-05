@@ -13,8 +13,12 @@
     margin-top: 10px;
 }
 
-.exo-hero-content{
+.exo-hero-content {
     overflow: scroll;
+    scrollbar-width: none; /* For Firefox */
+}
+.exo-hero-content::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
 }
 
 

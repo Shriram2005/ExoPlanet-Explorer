@@ -1,0 +1,181 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #cccccc;
+}
+
+/* Section Styles */
+.exo-hero {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../contents/images/space-bg.jpg') no-repeat center center/cover;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.exo-hero-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.exo-hero-overlay {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.exo-hero-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.exo-hero-subtitle {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+.exo-content {
+    padding: 60px 20px;
+    background-color: #1f1f1f;
+}
+
+.exo-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.exo-section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #00aaff;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #00aaff;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+button {
+    background-color: #00aaff;
+    color: #ffffff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#search-button:hover {
+    background-color: #0077b6;
+}
+
+.exo-results {
+    margin-top: 40px;
+    color: #ffffff;
+}
+
+.exo-results table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.exo-results th, .exo-results td {
+    padding: 10px;
+    border: 1px solid #00aaff;
+    text-align: left;
+}
+
+.exo-results th {
+    background-color: #00aaff;
+    color: #ffffff;
+}
+
+.exo-results tr:nth-child(even) {
+    background-color: #333333;
+}
+
+/* Range Filter Styles */
+.range-group {
+    display: flex;
+    gap: 10px;
+}
+
+.range-group .form-group {
+    flex: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .exo-hero {
+        height: 300px;
+    }
+
+    .exo-hero-title {
+        font-size: 2rem;
+    }
+
+    .exo-hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .exo-section-title {
+        font-size: 2rem;
+    }
+
+    input, select, button {
+        font-size: 1rem;
+    }
+
+    .range-group {
+        flex-direction: column;
+    }
+}
