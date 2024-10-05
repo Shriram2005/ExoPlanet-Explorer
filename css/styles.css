@@ -17,7 +17,10 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
-
+#nasa-logo {
+    height: 60px;
+    width: auto;
+}
 /* Header and Navigation */
 .exo-header {
     position: relative;
@@ -42,7 +45,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 10px 20px; /* Reduced top and bottom padding */
 }
 
 .exo-logo img {
@@ -470,7 +473,6 @@ body {
 
 .exo-footer-content {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 40px;
 }
@@ -478,8 +480,6 @@ body {
 .exo-footer-section {
     flex: 1;
     margin-right: 30px;
-    margin-bottom: 30px;
-    min-width: 200px;
 }
 
 .exo-footer-section:last-child {
@@ -512,120 +512,16 @@ body {
     color: #00a8e8;
 }
 
-.exo-footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.exo-footer-links ul li {
-    margin-bottom: 10px;
-}
-
-.exo-footer-links ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.exo-footer-links ul li a:hover {
-    color: #00a8e8;
-}
-
-.exo-footer-contact i {
-    margin-right: 10px;
-    color: #00a8e8;
-}
-
-.exo-footer-bottom {
-    border-top: 1px solid #333333;
-    padding-top: 20px;
-    text-align: center;
-    font-size: 0.9rem;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .exo-nav-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(10px);
-        padding-bottom: 10px;
-    }
-
-    .exo-nav-menu li a {
-        padding: 5px;
-        margin: 10px;
-    }
-
-
-    .exo-nav-menu.active {
-        display: flex;
-    }
-
-    .exo-nav-link {
-        padding: 15px;
-        text-align: center;
-    }
-
-    .exo-menu-toggle {
-        display: flex;
-    }
-
-    .exo-hero-content h1 {
-        font-size: 3rem;
-    }
-
-    .exo-hero-content p {
-        font-size: 1.2rem;
-    }
-
-    .exo-type-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .exo-method-item {
-        flex-basis: 100%;
-    }
-
-    .exo-stats-grid,
-    .exo-research-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .exo-planet-slider {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .exo-planet-slide {
-        width: 100%;
-    }
-
-    .exo-footer-section {
-        margin-right: 0;
-        margin-bottom: 30px;
-    }
-}
-
-.exo-footer-content {
-    flex-direction: column;
-}
-
 .exo-footer-section.exo-links .exo-quick-links-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    display: flex;
+    justify-content: flex-start; /* Changed from space-between to flex-start */
 }
 
 .exo-footer-section.exo-links ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 50%; /* Added to ensure each column takes up half the width */
 }
 
 .exo-footer-section.exo-links ul li {
@@ -642,9 +538,122 @@ body {
     color: #00a8e8;
 }
 
+.exo-footer-bottom {
+    border-top: 1px solid #333333;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
 /* Responsive adjustment for smaller screens */
 @media (max-width: 768px) {
+    .exo-footer-content {
+        flex-direction: column;
+    }
+
+    .exo-footer-section {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
     .exo-footer-section.exo-links .exo-quick-links-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+
+    .exo-footer-section.exo-links ul {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 20px;
+    }
+}
+
+/* Mobile Sidebar */
+.exo-sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 2000;
+    transition: left 0.3s ease-in-out;
+    overflow-y: auto;
+}
+
+.exo-sidebar.active {
+    left: 0;
+}
+
+.exo-sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.exo-sidebar-logo {
+    height: 40px;
+    width: auto;
+}
+
+.exo-sidebar-close {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.exo-sidebar-menu {
+    list-style: none;
+    padding: 20px;
+}
+
+.exo-sidebar-link {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.exo-sidebar-link:hover {
+    color: #00a8e8;
+}
+
+.exo-sidebar-social {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.exo-sidebar-social a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.exo-sidebar-social a:hover {
+    color: #00a8e8;
+}
+
+/* Adjust existing styles for mobile */
+@media (max-width: 768px) {
+    .exo-navbar {
+        left: 0 !important;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .exo-nav-menu {
+        display: none;
+    }
+
+    .exo-menu-toggle {
+        display: flex;
     }
 }
