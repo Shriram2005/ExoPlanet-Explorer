@@ -1,3 +1,14 @@
+/* Root variables */
+:root {
+    --primary-color: #00a8e8;
+    --secondary-color: #0077b6;
+    --text-color: #ffffff;
+    --background-dark: #000000;
+    --background-light: #111111;
+    --background-lighter: #222222;
+    --background-lightest: #333333;
+}
+
 /* Reset and base styles */
 * {
     margin: 0;
@@ -8,8 +19,8 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #ffffff;
-    background-color: #000000;
+    color: var(--text-color);
+    background-color: var(--background-dark);
 }
 
 .exo-container {
@@ -17,10 +28,7 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
-#nasa-logo {
-    height: 60px;
-    width: auto;
-}
+
 /* Header and Navigation */
 .exo-header {
     position: relative;
@@ -32,9 +40,9 @@ body {
 .exo-navbar {
     position: fixed;
     top: 0;
-    left: 10% !important;
+    left: 10%;
     width: 80%;
-    height: 60px; /* Explicitly set the navbar height */
+    height: 60px;
     border-radius: 0 0 20px 20px;
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.5);
@@ -109,27 +117,13 @@ body {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Hero Content */
+/* Hero Section */
 .exo-hero-content {
     position: relative;
     height: 100%;
-    width: 100%;
 }
 
-.exo-background-video {
+.exo-hero-video {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -208,7 +202,7 @@ body {
 
 /* Exoplanets Info Section */
 .exo-info-section {
-    background-color: #111111;
+    background-color: var(--background-light);
 }
 
 .exo-learn-more-btn {
@@ -232,7 +226,7 @@ body {
 
 /* Exoplanet Types Section */
 .exo-types-section {
-    background-color: #222222;
+    background-color: var(--background-lighter);
 }
 
 .exo-type-grid {
@@ -287,7 +281,7 @@ body {
 
 /* Discovery Methods Section */
 .exo-discovery-section {
-    background-color: #111111;
+    background-color: var(--background-light);
 }
 
 .exo-method-list {
@@ -329,7 +323,7 @@ body {
 
 /* Exoplanet Statistics Section */
 .exo-stats-section {
-    background-color: #222222;
+    background-color: var(--background-lighter);
     padding: 80px 0;
 }
 
@@ -364,7 +358,7 @@ body {
 
 /* Notable Exoplanets Section */
 .exo-notable-section {
-    background-color: #111111;
+    background-color: var(--background-light);
     padding: 80px 0;
 }
 
@@ -408,7 +402,7 @@ body {
 
 /* Exoplanet Research Section */
 .exo-research-section {
-    background-color: #222222;
+    background-color: var(--background-lighter);
     padding: 80px 0;
 }
 
@@ -449,7 +443,7 @@ body {
 
 /* CTA Section */
 .exo-cta-section {
-    background-color: #0077b6;
+    background-color: var(--secondary-color);
     color: #ffffff;
     padding: 80px 0;
     text-align: center;
@@ -467,7 +461,7 @@ body {
 
 /* Main Footer */
 .exo-main-footer {
-    background-color: #111111;
+    background-color: var(--background-light);
     color: #ffffff;
     padding: 60px 0 20px;
 }
