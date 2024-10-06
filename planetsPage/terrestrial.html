@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,30 +8,64 @@
     <link rel="stylesheet" href="../css/GasGiants.css">
     <title>Terrestrial Planets - Exoplanets Explorer</title>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <button id="mobile-menu" data-target="nav-menu" class="exo-menu-toggle">Menu</button>
-            <div id="nav-menu" class="exo-nav-menu">
-                <a href="../index.html" class="exo-nav-link">Home</a>
-                <a href="../aboutUs.html" class="exo-nav-link">About Us</a>
-                <a href="../blog.html" class="exo-nav-link">Blog</a>
-                <a href="../contactUs.html" class="exo-nav-link">Contact Us</a>
+    <header class="">
+        <nav class="exo-navbar">
+            <div class="exo-navbar-container">
+                <a href="#" class="exo-logo">
+                    <img src="../contents/nasa-logo.png" alt="NASA Logo" id="nasa-logo">
+                </a>
+                <div class="exo-menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="exo-nav-menu" id="exo-nav-menu">
+                    <li><a href="../index.html" class="exo-nav-link">Home</a></li>
+                    <li><a href="../news.html" class="exo-nav-link">Latest News</a></li>
+                    <li><a href="../quiz.html" class="exo-nav-link">Quiz</a></li>
+                    <li><a href="../blog.html" class="exo-nav-link">Blog</a></li>
+                    <li><a href="../aboutUs.html" class="exo-nav-link">About Us</a></li>
+                </ul>
             </div>
         </nav>
+        <!-- Sidebar -->
+        <div class="exo-sidebar" id="exo-sidebar">
+            <div class="exo-sidebar-header">
+                <img src="../contents/nasa-logo.png" alt="NASA Logo" class="exo-sidebar-logo">
+                <button class="exo-sidebar-close" id="sidebar-close">&times;</button>
+            </div>
+            <ul class="exo-sidebar-menu">
+                <li><a href="./index.html" class="exo-sidebar-link">Home</a></li>
+                <li><a href="./news.html" class="exo-sidebar-link">Latest News</a></li>
+                <li><a href="./quiz.html" class="exo-sidebar-link">Quiz</a></li>
+                <li><a href="./blog.html" class="exo-sidebar-link">Blog</a></li>
+                <li><a href="./aboutUs.html" class="exo-sidebar-link">About Us</a></li>
+            </ul>
+            <div class="exo-sidebar-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
     </header>
     <main>
         <section class="exo-hero">
             <div class="exo-hero-content">
                 <h1 class="exo-hero-title" data-aos="fade-up">Terrestrial Planets</h1>
-                <p class="exo-hero-subtitle" data-aos="fade-up" data-aos-delay="200">Explore the rocky worlds similar to Earth</p>
+                <p class="exo-hero-subtitle" data-aos="fade-up" data-aos-delay="200">Explore the rocky worlds similar to
+                    Earth</p>
             </div>
         </section>
         <section class="exo-content">
             <div class="exo-container">
                 <h2 class="exo-section-title" data-aos="fade-up">What are Terrestrial Planets?</h2>
                 <p class="exo-section-text" data-aos="fade-up" data-aos-delay="200">
-                    Terrestrial planets are rocky planets that have a solid surface. They are similar in size and composition to Earth. The most well-known terrestrial planets in our solar system are Mercury, Venus, Earth, and Mars.
+                    Terrestrial planets are rocky planets that have a solid surface. They are similar in size and
+                    composition to Earth. The most well-known terrestrial planets in our solar system are Mercury,
+                    Venus, Earth, and Mars.
                 </p>
                 <div class="exo-planet-grid">
                     <div class="exo-planet-card" data-aos="fade-up" data-aos-delay="300">
@@ -41,19 +76,47 @@
                     <div class="exo-planet-card" data-aos="fade-up" data-aos-delay="400">
                         <img src="../contents/images/mars.jpg" alt="Mars">
                         <h3>Mars</h3>
-                        <p>Mars is known as the Red Planet and is the fourth planet from the Sun. It has the largest volcano and canyon in the solar system.</p>
+                        <p>Mars is known as the Red Planet and is the fourth planet from the Sun. It has the largest
+                            volcano and canyon in the solar system.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
-        <div class="exo-footer-content">
-            <div class="exo-footer-section exo-contact">
-                <h3>Contact Us</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Sandip University, Nashik</p>
-                <p><i class="fas fa-phone"></i> +91 98341 34470</p>
-                <p><i class="fas fa-envelope"></i> info@exoplanetsexplorer.com</p>
+    <footer class="exo-main-footer">
+        <div class="exo-container">
+            <div class="exo-footer-content">
+                <div class="exo-footer-section exo-about">
+                    <h3>About Exoplanets Explorer</h3>
+                    <p>Dedicated to exploring and understanding worlds beyond our solar system.</p>
+                    <div class="exo-social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="exo-footer-section exo-links">
+                    <h3>Quick Links</h3>
+                    <div class="exo-quick-links-grid">
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./news.html">Latest News</a></li>
+                            <li><a href="./quiz.html">Quiz</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="./learn.html">Learn</a></li>
+                            <li><a href="./aboutUs.html">About Us</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exo-footer-section exo-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Sandip University, Nashik</p>
+                    <p><i class="fas fa-phone"></i> +91 98341 34470</p>
+                    <p><i class="fas fa-envelope"></i> info@exoplanetsexplorer.com</p>
+                </div>
             </div>
             <div class="exo-footer-bottom">
                 <p>&copy; 2023 Exoplanets Explorer. All rights reserved.</p>
@@ -61,10 +124,16 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        AOS.init();
+    </script>
+    <!-- nav bar script  -->
     <script src="../js/nav.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
 </body>
+
 </html>

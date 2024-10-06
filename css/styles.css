@@ -543,6 +543,8 @@ body {
     gap: 30px;
     padding: 40px 0;
     left: 10%;
+    width: 100%;
+    justify-content: center;
 }
 
 .exo-planet-slide {
@@ -855,10 +857,12 @@ body {
     }
 }
 
-/* Add this to ensure all main content starts below the fixed navbar */
-main {
-    padding-top: 60px; /* Should match the navbar height */
-}
+/* Add this to ensure all main content starts below the fixed navbar 
+ Should match the navbar height */
+
+/* main {
+    
+} */
 
 /* Responsive adjustment for smaller screens */
 @media (max-width: 768px) {

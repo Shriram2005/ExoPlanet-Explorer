@@ -24,8 +24,12 @@
 
 .exo-hero-content {
     z-index: 1;
-    max-width: 800px;
     padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('../contents/images/GasGiant.jpeg') no-repeat center center/cover;
 }
 
 .exo-hero-title {
@@ -94,14 +98,16 @@
 
 .exo-planet-card h3 {
     font-size: 2rem;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     color: #00a8e8;
+    padding-inline: 30px;
 }
 
 .exo-planet-card p {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #ffffff;
+    padding: 30px;
 }
 
 .exo-planet-card:hover {
@@ -173,11 +179,15 @@
         font-size: 1.1rem;
     }
 
+    
     .exo-planet-card h3 {
         font-size: 1.8rem;
+        padding: 15px;
     }
 
     .exo-planet-card p {
         font-size: 1rem;
+        padding: 15px;
     }
+
 }

@@ -8,16 +8,46 @@
     <title>Super-Earths - Exoplanets Explorer</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <button id="mobile-menu" data-target="nav-menu" class="exo-menu-toggle">Menu</button>
-            <div id="nav-menu" class="exo-nav-menu">
-                <a href="../index.html" class="exo-nav-link">Home</a>
-                <a href="../aboutUs.html" class="exo-nav-link">About Us</a>
-                <a href="../blog.html" class="exo-nav-link">Blog</a>
-                <a href="../contactUs.html" class="exo-nav-link">Contact Us</a>
+    <header class="">
+        <nav class="exo-navbar">
+            <div class="exo-navbar-container">
+                <a href="#" class="exo-logo">
+                    <img src="../contents/nasa-logo.png" alt="NASA Logo" id="nasa-logo">
+                </a>
+                <div class="exo-menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="exo-nav-menu" id="exo-nav-menu">
+                    <li><a href="../index.html" class="exo-nav-link">Home</a></li>
+                    <li><a href="../news.html" class="exo-nav-link">Latest News</a></li>
+                    <li><a href="../quiz.html" class="exo-nav-link">Quiz</a></li>
+                    <li><a href="../blog.html" class="exo-nav-link">Blog</a></li>
+                    <li><a href="../aboutUs.html" class="exo-nav-link">About Us</a></li>
+                </ul>
             </div>
         </nav>
+        <!-- Sidebar -->
+        <div class="exo-sidebar" id="exo-sidebar">
+            <div class="exo-sidebar-header">
+                <img src="../contents/nasa-logo.png" alt="NASA Logo" class="exo-sidebar-logo">
+                <button class="exo-sidebar-close" id="sidebar-close">&times;</button>
+            </div>
+            <ul class="exo-sidebar-menu">
+                <li><a href="./index.html" class="exo-sidebar-link">Home</a></li>
+                <li><a href="./news.html" class="exo-sidebar-link">Latest News</a></li>
+                <li><a href="./quiz.html" class="exo-sidebar-link">Quiz</a></li>
+                <li><a href="./blog.html" class="exo-sidebar-link">Blog</a></li>
+                <li><a href="./aboutUs.html" class="exo-sidebar-link">About Us</a></li>
+            </ul>
+            <div class="exo-sidebar-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
     </header>
     <main>
         <section class="exo-hero">
@@ -34,12 +64,12 @@
                 </p>
                 <div class="exo-planet-grid">
                     <div class="exo-planet-card" data-aos="fade-up" data-aos-delay="300">
-                        <img src="../contents/images/superEarth1.jpg" alt="Super-Earth 1">
+                        <img src="../contents/images/super-earth1.webp" alt="Super-Earth 1">
                         <h3>Super-Earth 1</h3>
                         <p>This is a hypothetical super-Earth that is larger than Earth but smaller than Neptune.</p>
                     </div>
                     <div class="exo-planet-card" data-aos="fade-up" data-aos-delay="400">
-                        <img src="../contents/images/superEarth2.jpg" alt="Super-Earth 2">
+                        <img src="../contents/images/super-earth2.webp" alt="Super-Earth 2">
                         <h3>Super-Earth 2</h3>
                         <p>This is another example of a super-Earth, showcasing the diversity of these types of planets.</p>
                     </div>
@@ -47,13 +77,40 @@
             </div>
         </section>
     </main>
-    <footer>
-        <div class="exo-footer-content">
-            <div class="exo-footer-section exo-contact">
-                <h3>Contact Us</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Sandip University, Nashik</p>
-                <p><i class="fas fa-phone"></i> +91 98341 34470</p>
-                <p><i class="fas fa-envelope"></i> info@exoplanetsexplorer.com</p>
+    <footer class="exo-main-footer">
+        <div class="exo-container">
+            <div class="exo-footer-content">
+                <div class="exo-footer-section exo-about">
+                    <h3>About Exoplanets Explorer</h3>
+                    <p>Dedicated to exploring and understanding worlds beyond our solar system.</p>
+                    <div class="exo-social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="exo-footer-section exo-links">
+                    <h3>Quick Links</h3>
+                    <div class="exo-quick-links-grid">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Latest News</a></li>
+                            <li><a href="#">Quiz</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Learn</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exo-footer-section exo-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Sandip University, Nashik</p>
+                    <p><i class="fas fa-phone"></i> +91 98341 34470</p>
+                    <p><i class="fas fa-envelope"></i> info@exoplanetsexplorer.com</p>
+                </div>
             </div>
             <div class="exo-footer-bottom">
                 <p>&copy; 2023 Exoplanets Explorer. All rights reserved.</p>
@@ -61,10 +118,11 @@
             </div>
         </div>
     </footer>
-    <script src="../js/nav.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+
+
     <script>
         AOS.init();
     </script>
+    <script src="../js/nav.js"></script>
 </body>
 </html>
