@@ -27,7 +27,12 @@ Check out the **live demo** of the project here: [ExoPlanet Explorer](https://ex
 
 ## 👨‍🚀 Team
 
-This project was developed by a passionate team of **space enthusiasts** for the **NASA Space Apps Hackathon 2024**.
+1.  Mustafa Pinjari
+2.	Shriram Mange
+3.	Dhruv Tambat
+4.	Ketan Shimpi
+5.	Umesh Maurya
+6.	Hariomvimal Singh
 
 ## 📩 Contact
 
