@@ -10,18 +10,17 @@ const questions = [
     { question: "Which type of exoplanet is most commonly found?", options: ["Gas giants", "Earth-like planets", "Rocky planets", "Ice giants"], answer: 0 },
     { question: "What does the term 'rogue planet' refer to?", options: ["A planet that does not orbit any star", "A planet moving out of its solar system", "A starless black hole", "A planet orbiting multiple stars"], answer: 0 },
     // Add 10 more questions
-    { question: "Which is the nearest exoplanet?", options: ["Proxima b", "Kepler-452b", "Jupiter", "Venus"], answer: 0 },
-    { question: "Which of the following is a gas giant exoplanet?", options: ["Kepler-7b", "Earth", "Mars", "Venus"], answer: 0 },
-    { question: "What is the transit method used for?", options: ["Detecting exoplanets", "Detecting stars", "Measuring distance between planets", "Finding black holes"], answer: 0 },
-    { question: "Which space telescope is primarily designed to search for exoplanets?", options: ["Kepler", "James Webb", "Chandra", "Spitzer"], answer: 0 },
-    { question: "What is the primary characteristic of a 'rocky planet'?", options: ["Solid surface", "Gas surface", "Icy surface", "Dusty surface"], answer: 0 },
-    { question: "Which is the largest exoplanet discovered so far?", options: ["HD 100546 b", "Kepler-452b", "Mars", "Gliese 581g"], answer: 0 },
-    { question: "What does the 'habitable zone' mean?", options: ["Area where liquid water could exist", "Zone with only gas planets", "Zone with no stars", "Cold region in space"], answer: 0 },
-    { question: "Which planet in our solar system is often compared to exoplanets?", options: ["Jupiter", "Saturn", "Mars", "Venus"], answer: 0 },
-    { question: "How are exoplanets often named?", options: ["By their host star", "By their size", "By their color", "By their temperature"], answer: 0 },
-    { question: "Which method can measure the wobble of stars caused by planets?", options: ["Radial velocity", "Direct imaging", "Gravitational lensing", "Transit method"], answer: 0 }
+    // { question: "Which is the nearest exoplanet?", options: ["Proxima b", "Kepler-452b", "Jupiter", "Venus"], answer: 0 },
+    // { question: "Which of the following is a gas giant exoplanet?", options: ["Kepler-7b", "Earth", "Mars", "Venus"], answer: 0 },
+    // { question: "What is the transit method used for?", options: ["Detecting exoplanets", "Detecting stars", "Measuring distance between planets", "Finding black holes"], answer: 0 },
+    // { question: "Which space telescope is primarily designed to search for exoplanets?", options: ["Kepler", "James Webb", "Chandra", "Spitzer"], answer: 0 },
+    // { question: "What is the primary characteristic of a 'rocky planet'?", options: ["Solid surface", "Gas surface", "Icy surface", "Dusty surface"], answer: 0 },
+    // { question: "Which is the largest exoplanet discovered so far?", options: ["HD 100546 b", "Kepler-452b", "Mars", "Gliese 581g"], answer: 0 },
+    // { question: "What does the 'habitable zone' mean?", options: ["Area where liquid water could exist", "Zone with only gas planets", "Zone with no stars", "Cold region in space"], answer: 0 },
+    // { question: "Which planet in our solar system is often compared to exoplanets?", options: ["Jupiter", "Saturn", "Mars", "Venus"], answer: 0 },
+    // { question: "How are exoplanets often named?", options: ["By their host star", "By their size", "By their color", "By their temperature"], answer: 0 },
+    // { question: "Which method can measure the wobble of stars caused by planets?", options: ["Radial velocity", "Direct imaging", "Gravitational lensing", "Transit method"], answer: 0 }
 ];
-
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -37,19 +36,29 @@ const prevButton = document.getElementById('prev-button');
 const resultContainer = document.getElementById('result');
 const progressElement = document.getElementById('progress');
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 function showQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
     questionElement.innerText = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
     optionsContainer.innerHTML = '';
 
-    currentQuestion.options.forEach((option, index) => {
+    const shuffledOptions = [...currentQuestion.options];
+    shuffleArray(shuffledOptions);
+
+    shuffledOptions.forEach((option, index) => {
         const button = document.createElement('div');
         button.classList.add('option');
         button.innerHTML = `<span class="option-label">${String.fromCharCode(65 + index)}.</span> ${option}`;
-        button.addEventListener('click', () => selectOption(index));
+        button.addEventListener('click', () => selectOption(currentQuestion.options.indexOf(option)));
         optionsContainer.appendChild(button);
 
-        if (selectedOptions[currentQuestionIndex] === index) {
+        if (selectedOptions[currentQuestionIndex] === currentQuestion.options.indexOf(option)) {
             button.classList.add('selected');
         }
     });
@@ -128,6 +137,7 @@ function showResult() {
 }
 
 function showReview() {
+    currentQuestionIndex = 0; // Reset the question index to start from the beginning
     questionContainer.style.display = 'block';
     resultContainer.innerHTML = '<h2>Answer Review</h2>';
     optionsContainer.innerHTML = '';
@@ -140,17 +150,20 @@ function showReview() {
         const optionsDiv = document.createElement('div');
         optionsDiv.classList.add('options-container');
 
-        question.options.forEach((option, i) => {
+        const shuffledOptions = [...question.options];
+        shuffleArray(shuffledOptions);
+
+        shuffledOptions.forEach((option, i) => {
             const optionButton = document.createElement('div');
             optionButton.classList.add('option');
             optionButton.innerHTML = `<span class="option-label">${String.fromCharCode(65 + i)}.</span> ${option}`;
             
-            if (selectedOptions[index] === i && i === question.answer) {
+            if (selectedOptions[index] === question.options.indexOf(option) && question.options.indexOf(option) === question.answer) {
                 optionButton.classList.add('correct-answer');
-            } else if (selectedOptions[index] === i) {
+            } else if (selectedOptions[index] === question.options.indexOf(option)) {
                 optionButton.classList.add('wrong-answer');
                 optionButton.innerHTML += ` <span class="correct-label">(Correct: ${question.options[question.answer]})</span>`;
-            } else if (i === question.answer) {
+            } else if (question.options.indexOf(option) === question.answer) {
                 optionButton.classList.add('correct-answer');
             }
 
