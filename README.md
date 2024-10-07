@@ -23,12 +23,12 @@ Welcome to **ExoPlanet Explorer** – a web application developed for the **NASA
 
 ## 🌍 Live Demo
 
-Check out the **live demo** of the project here: [ExoPlanet Explorer](https://exoscout.netlify.app/) 🚀🌠
+Check out the **live demo** of the project here: [ExoPlanet Explorer](https://exooplanets.netlify.app) 🚀🌠
 
 ## 👨‍🚀 Team
 
-1.  Mustafa Pinjari
-2.	Shriram Mange
+1.  Shriram Mange
+2.	Mustafa Pinjari
 3.	Dhruv Tambat
 4.	Ketan Shimpi
 5.	Umesh Maurya
@@ -36,4 +36,4 @@ Check out the **live demo** of the project here: [ExoPlanet Explorer](https://ex
 
 ## 📩 Contact
 
-For any inquiries, feel free to reach out to us at **info@exoplanetsexplorer.com**.
+For any inquiries, feel free to reach out to us at **mange.shriram@gmail.com**.
