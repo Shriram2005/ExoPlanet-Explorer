@@ -31,8 +31,12 @@ Check out the **live demo** of the project here: [ExoPlanet Explorer](https://ex
 2.	Mustafa Pinjari
 3.	Dhruv Tambat
 4.	Ketan Shimpi
-5.	Umesh Maurya
-6.	Hariomvimal Singh
+6.	Umesh Maurya
+7.	Hariomvimal Singh
+
+##  Problem Statement Title
+
+Chronicles of Exoplanet Exploration
 
 ## 📩 Contact
 
